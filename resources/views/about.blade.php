@@ -31,34 +31,26 @@
                     <p class="text-gray-600 leading-relaxed text-lg">
                         Melalui konsep <strong>Visual Discovery</strong> dan <strong>Hyper-Local E-Commerce</strong>, kami memudahkan konsumen menemukan kuliner tersembunyi di sekitar mereka sekaligus memberikan panggung bagi para pelaku kuliner tradisional untuk bersinar.
                     </p>
-                    <div class="flex items-center space-x-4 pt-4">
-                        <div class="flex -space-x-2">
-                            @for($i = 1; $i <= 4; $i++)
-                                <img class="inline-block h-10 w-10 rounded-full ring-2 ring-white" src="https://ui-avatars.com/api/?name=User+{{ $i }}&background=random" alt="">
-                            @endfor
-                        </div>
-                        <p class="text-sm font-medium text-gray-500">Bergabunglah bersama ribuan pecinta kuliner lainnya.</p>
-                    </div>
                 </div>
             </div>
 
             {{-- Supporters Section --}}
             <div class="border-t border-gray-100 pt-24 pb-12 text-center">
                 <h3 class="text-sm font-black text-gray-400 uppercase tracking-[0.3em] mb-12">Supported By</h3>
-                <div class="grid grid-cols-3 md:grid-cols-5 mx-20 md:mx-30 items-center opacity-70 transition-all duration-500">
-                    <div class="flex items-center justify-center p-4">
+                <div class="flex flex-wrap justify-center items-center opacity-70 transition-all duration-500 max-w-6xl mx-auto">
+                    <div class="w-1/2 md:w-1/3 lg:w-1/5 flex items-center justify-center p-4">
                         <img src="{{ asset('images/logos/unimed.png') }}" alt="Unimed" class="h-24 w-auto object-contain">
                     </div>
-                    <div class="flex items-center justify-center p-4">
+                    <div class="w-1/2 md:w-1/3 lg:w-1/5 flex items-center justify-center p-4">
                         <img src="{{ asset('images/logos/kemdikbud.png') }}" alt="Kemdikbud" class="h-24 w-auto object-contain">
                     </div>
-                    <div class="flex items-center justify-center p-4">
+                    <div class="w-1/2 md:w-1/3 lg:w-1/5 flex items-center justify-center p-4">
                         <img src="{{ asset('images/logos/kampus_berdampak.png') }}" alt="Kampus Berdampak" class="h-24 w-auto object-contain">
                     </div>
-                    <div class="flex items-center justify-center p-4">
+                    <div class="w-1/2 md:w-1/3 lg:w-1/5 flex items-center justify-center p-4">
                         <img src="{{ asset('images/logos/bima.png') }}" alt="Bima" class="h-24 w-auto object-contain">
                     </div>
-                    <div class="flex items-center justify-center p-4">
+                    <div class="w-1/2 md:w-1/3 lg:w-1/5 flex items-center justify-center p-4">
                         <img src="{{ asset('images/logos/smk_negeri_3_tanjung_balai.png') }}" alt="SMK Negeri 3 Tanjung Balai" class="h-24 w-auto object-contain">
                     </div>
                 </div>
