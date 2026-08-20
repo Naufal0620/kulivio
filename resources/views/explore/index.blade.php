@@ -1,5 +1,5 @@
 <x-app-layout>
-    <div class="bg-black h-screen h-dvh overflow-hidden relative">
+    <div class="bg-black h-screen h-dvh overflow-hidden relative" style="padding-bottom: env(safe-area-inset-bottom, 0px)">
         <!-- Back Button -->
         <a href="{{ route('home') }}" class="fixed top-6 left-6 z-[60] bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-all shadow-2xl backdrop-blur-sm border border-white/10 group">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform group-hover:-translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -36,14 +36,12 @@
 
         /* Adjust video player internal spacing for full screen feel */
         .video-container-fixed {
-            width: 100vw;
-            height: 100vh;
-            height: 100dvh; /* Dynamic viewport height - accounts for browser/system UI */
+            width: 100%;
+            height: 100%;
             max-width: 450px; /* Standard mobile width */
             margin: 0 auto;
             position: relative;
             background: black;
-            padding-bottom: env(safe-area-inset-bottom, 0px);
         }
 
         .aspect-\[9\/16\] {
