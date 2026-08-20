@@ -1,5 +1,5 @@
 <x-app-layout>
-    <div class="bg-black h-screen h-dvh overflow-hidden relative" style="padding-bottom: env(safe-area-inset-bottom, 0px)">
+    <div id="explore-container" class="bg-black overflow-hidden relative">
         <!-- Back Button -->
         <a href="{{ route('home') }}" class="fixed top-6 left-6 z-[60] bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-all shadow-2xl backdrop-blur-sm border border-white/10 group">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform group-hover:-translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -21,6 +21,22 @@
             @endforelse
         </div>
     </div>
+
+    <script>
+        function updateExploreHeight() {
+            const container = document.getElementById('explore-container');
+            if (container && window.visualViewport) {
+                container.style.height = window.visualViewport.height + 'px';
+            }
+        }
+
+        if (window.visualViewport) {
+            window.visualViewport.addEventListener('resize', updateExploreHeight);
+            window.visualViewport.addEventListener('scroll', updateExploreHeight);
+        }
+        window.addEventListener('resize', updateExploreHeight);
+        updateExploreHeight();
+    </script>
 
     <style>
         /* Hide scrollbar for Chrome, Safari and Opera */
