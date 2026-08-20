@@ -1,5 +1,5 @@
 <x-app-layout>
-    <div class="pb-32 sm:pb-12 bg-gray-50 min-h-screen">
+    <div class="pb-6 bg-gray-50 min-h-screen">
         <!-- Sticky Header with Back Button -->
         <div class="sticky top-0 z-30 bg-white/80 backdrop-blur-md border-b border-gray-100 p-4 flex items-center">
             <a href="{{ route('courier.dashboard') }}" class="p-2 -ml-2 text-gray-400 hover:text-primary-600 transition">
@@ -104,8 +104,9 @@
             </div>
         </div>
 
-        <!-- Fixed Bottom Action Bar -->
-        <div class="fixed bottom-0 left-0 right-0 bg-white/90 backdrop-blur-xl border-t border-gray-100 p-6 z-40 sm:max-w-xl sm:mx-auto sm:relative sm:mt-8 sm:rounded-3xl sm:border sm:shadow-lg">
+        <!-- Bottom Action Bar -->
+        <div class="relative max-w-xl mx-auto px-4 mt-6 sm:mt-8">
+            <div class="bg-white/90 backdrop-blur-xl border border-gray-100 rounded-3xl shadow-lg p-6">
             @if($order->status === 'shipped')
             <form action="{{ route('courier.orders.complete', $order) }}" method="POST" enctype="multipart/form-data" onsubmit="return confirm('Konfirmasi bahwa pesanan sudah sampai ke tangan pelanggan?')">
                 @csrf
@@ -245,6 +246,7 @@
                     </div>
                 </div>
             @endif
+            </div>
         </div>
     </div>
 

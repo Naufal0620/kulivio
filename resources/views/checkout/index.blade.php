@@ -55,7 +55,7 @@
                                 Promo & Kupon
                             </h3>
                             <div class="flex gap-2">
-                                <input type="text" name="coupon_code" id="coupon_code" placeholder="Punya kode kupon?" class="flex-1 border-gray-100 bg-gray-50 focus:bg-white focus:border-primary-500 focus:ring-primary-500 rounded-xl shadow-sm transition-all" value="{{ old('coupon_code') }}" />
+                                <input type="text" name="coupon_code" id="coupon_code" placeholder="Punya kode kupon?" class="flex-1 max-w-[70%] sm:max-w-none border-gray-100 bg-gray-50 focus:bg-white focus:border-primary-500 focus:ring-primary-500 rounded-xl shadow-sm transition-all" value="{{ old('coupon_code') }}" />
                                 <button type="button" id="apply-coupon-btn" class="px-6 py-2 bg-gray-800 text-white rounded-xl font-bold text-sm hover:bg-gray-900 transition active:scale-95">Pakai</button>
                             </div>
                             <div id="coupon-message" class="text-xs mt-3 hidden font-bold"></div>
