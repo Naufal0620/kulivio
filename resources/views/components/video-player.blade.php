@@ -153,7 +153,7 @@
     </div>
 
     {{-- Overlay Controls --}}
-    <div class="absolute bottom-6 right-4 flex flex-col items-center space-y-6 z-20">
+    <div class="absolute right-4 flex flex-col items-center space-y-6 z-20" style="bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px))">
         {{-- Product Detail Link (Beli) --}}
         <a href="{{ route('products.show', $video->product) }}" class="flex flex-col items-center text-white">
             <div class="p-3 bg-white/10 backdrop-blur-md rounded-full hover:bg-white/20 transition">
@@ -197,7 +197,7 @@
     </div>
 
     {{-- Product Info Overlay --}}
-    <div class="absolute bottom-6 left-4 right-16 text-white bg-gradient-to-t from-black/60 to-transparent p-4 rounded-xl backdrop-blur-[2px]">
+    <div class="absolute left-4 right-16 text-white bg-gradient-to-t from-black/60 to-transparent p-4 rounded-xl backdrop-blur-[2px]" style="bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px))">
         <div class="flex items-center space-x-2 mb-1">
             <span class="bg-primary-500 text-[10px] font-extrabold px-2 py-0.5 rounded-full uppercase tracking-wider">Pre-Order</span>
             <span class="text-xs opacity-80">{{ $video->product->pre_order_days }} Hari</span>
